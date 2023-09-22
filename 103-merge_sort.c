@@ -1,19 +1,19 @@
 #include "sort.h"
 
 /**
- * merge - merges the splits from the merge_sorty
- * @array: array split to merge
- * @low: lowest index of split
- * @middle: middle index of split
- * @high: high index of split
- * @temp: temp array for merging
- */
+* merge - Merges the splits from merge_sorty
+* @array: Array split to merge
+* @low: lowest index of split
+* @middle: middle index of split
+* @high: high index of split
+* @temp: temp array for merging
+*/
 
-void merge(int *array, int low, int low, int middle, int high, int *temp)
+void merge(int *array, int low, int middle, int high, int *temp)
 {
 	int i, j, k, l = 0, r = 0, n, left[4096], right[4096];
 
-	print("Merging...\n");
+	printf("Merging...\n");
 	i = low, j = middle + 1, k = l = 0;
 	while (i <= middle && j <= high)
 	{
@@ -26,12 +26,12 @@ void merge(int *array, int low, int low, int middle, int high, int *temp)
 		temp[k] = left[l] = array[i], k++, i++, l++;
 	while (j <= high)
 		temp[k] = right[r] = array[j], k++, j++, r++;
-	print(("[left]: ");
+	printf("[left]: ");
 	for (n = 0; n < l; n++)
 		(n == 0) ? printf("%d", left[n]) : printf(", %d", left[n]);
 	printf("\n[right]: ");
 	for (n = 0; n < r; n++)
-		(n == 0) ? printf("%d", right[n] : printf(", %d", right[n]);
+		(n == 0) ? printf("%d", right[n]) : printf(", %d", right[n]);
 	printf("\n[Done]: ");
 	for (i = low; i <= high; i++)
 	{
@@ -82,4 +82,3 @@ void merge_sort(int *array, size_t size)
 	merge_sorty(array, 0, size - 1, temp);
 	free(temp);
 }
-
