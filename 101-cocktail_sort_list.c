@@ -15,7 +15,7 @@ size_t list_len(listint_t *list)
 		len++;
 		list = list->next;
 	}
-	=return (len);
+	return (len);
 }
 
 /**
