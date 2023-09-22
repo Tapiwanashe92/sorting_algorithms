@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * len_list - returns the length of  linked list
+ * len_list - returns the length of a linked list
  * @h: pointer to the list
  *
  * Return: length of list
@@ -19,7 +19,7 @@ int len_list(listint_t *h)
 }
 
 /**
- * insertion_sort_list - sorts a linked list with the insert sort algorithm
+ * insertion_sort_list - sorts a linked list with the Insert Sort algorithm
  * @list: double pointer to the list to sort
  */
 void insertion_sort_list(listint_t **list)
@@ -53,7 +53,7 @@ void insertion_sort_list(listint_t **list)
 			two->prev = three;
 			curr = *list;
 			print_list(*list);
-			contiue;
+			continue;
 		}
 		else
 			curr = curr->next;
