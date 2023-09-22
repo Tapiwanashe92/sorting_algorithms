@@ -3,9 +3,9 @@
 /**
  * swap_values - swaps 2 values in an array of ints
  *
- * array: the array of ints
+ * @array: the array of ints
  * @i1: index of first value
- * @i2: index of second value
+ * @i2: index of 2nd value
  *
  * Return: the array with value
  */
@@ -14,7 +14,7 @@ void swap_values(int **array, ssize_t i1, ssize_t i2)
 {
 	int tmp;
 
-	tmp = (**array)[i];
+	tmp = (*array)[i1];
 	(*array)[i1] = (*array)[i2];
 	(*array)[i2] = tmp;
 }
@@ -39,7 +39,7 @@ void bubble_sort(int *array, size_t size)
 			{
 				swap_values(&array, i - 1, i);
 				print_array(array, size);
-				new_n = 1;
+				new_n = i;
 			}
 		}
 		n = new_n;
